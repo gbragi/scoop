@@ -1,0 +1,23 @@
+{
+  "homepage": "https://www.gloo.solo.io/",
+  "license": "Apache-2.0",
+  "version": "v0.7.7",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/solo-io/gloo/releases/download/v0.7.7/glooctl-windows-amd64.exe",
+      "hash": "951b520f731593ab48f8cd74da5991b832a766da26d8e3724af4b9ef6759ff33"
+    }
+  },
+  "bin": [["glooctl-windows-amd64.exe", "glooctl"]],
+  "post_install": "glooctl --version",
+  "checkver": {
+    "github": "https://github.com/solo-io/gloo"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/solo-io/gloo/releases/download/$version/glooctl-windows-amd64.exe"
+      }
+    }
+  }
+}
